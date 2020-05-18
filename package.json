@@ -1,6 +1,6 @@
 {
   "name": "@breizh24/scops-legacy-charts-nvd3",
-  "version": "0.10.39",
+  "version": "0.1.0",
   "description": "Scops Legacy Chart - NVD3",
   "sideEffects": [
     "*.css"
