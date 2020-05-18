@@ -17,9 +17,6 @@
   ],
   "author": "Superset",
   "license": "Apache-2.0",
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
-  },
   "dependencies": {
     "@data-ui/xy-chart": "^0.0.78",
     "@superset-ui/chart": "^0.11.0",
@@ -52,5 +49,8 @@
     "@superset-ui/time-format": "^0.10.0 || ^0.11.0",
     "@superset-ui/translation": "^0.10.0 || ^0.11.0",
     "react": "^15 || ^16"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
   }
 }
