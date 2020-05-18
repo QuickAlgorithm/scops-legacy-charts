@@ -1,0 +1,56 @@
+{
+  "name": "@breizh24/scops-legacy-charts-nvd3",
+  "version": "0.10.39",
+  "description": "Scops Legacy Chart - NVD3",
+  "sideEffects": [
+    "*.css"
+  ],
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "files": [
+    "esm",
+    "lib"
+  ],
+  "repository": "git://github.com:breizh24/scops-legacy-charts-nvd3.git",
+  "keywords": [
+    "superset"
+  ],
+  "author": "Superset",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@data-ui/xy-chart": "^0.0.78",
+    "@superset-ui/chart": "^0.11.0",
+    "@superset-ui/color": "^0.11.0",
+    "@superset-ui/connection": "^0.9.0",
+    "@superset-ui/core": "^0.11.0",
+    "@superset-ui/dimension": "^0.11.0",
+    "@superset-ui/number-format": "^0.11.0",
+    "@superset-ui/time-format": "^0.11.0",
+    "@superset-ui/translation": "^0.11.0",
+    "d3": "^3.5.17",
+    "d3-tip": "^0.9.1",
+    "dompurify": "^1.0.3",
+    "fast-safe-stringify": "^2.0.6",
+    "lodash": "^4.17.11",
+    "mathjs": "^3.20.2",
+    "moment": "^2.20.1",
+    "nvd3": "1.8.6",
+    "prop-types": "^15.6.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "urijs": "^1.18.10"
+  },
+  "peerDependencies": {
+    "@superset-ui/chart": "^0.10.0 || ^0.11.0",
+    "@superset-ui/color": "^0.10.0 || ^0.11.0",
+    "@superset-ui/core": "^0.10.0 || ^0.11.0",
+    "@superset-ui/dimension": "^0.10.0 || ^0.11.0",
+    "@superset-ui/number-format": "^0.10.0 || ^0.11.0",
+    "@superset-ui/time-format": "^0.10.0 || ^0.11.0",
+    "@superset-ui/translation": "^0.10.0 || ^0.11.0",
+    "react": "^15 || ^16"
+  }
+}
