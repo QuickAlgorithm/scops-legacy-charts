@@ -1,6 +1,6 @@
 {
-  "name": "@breizh24/scops-legacy-charts-nvd3",
-  "version": "0.11.4",
+  "name": "@quickalgorithm/scops-legacy-charts",
+  "version": "0.10.39",
   "description": "Scops Legacy Chart - NVD3",
   "sideEffects": [
     "*.css"
@@ -11,7 +11,7 @@
     "esm",
     "lib"
   ],
-  "repository": "git://github.com:breizh24/scops-legacy-charts-nvd3.git",
+  "repository": "git://github.com:QuickAlgorithm/scops-legacy-charts.git",
   "keywords": [
     "superset"
   ],
