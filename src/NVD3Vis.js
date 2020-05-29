@@ -206,7 +206,7 @@ const chartSteps = Object.freeze({
   //the value in the step 0 will never be used in the function that adds the filters
   0: { granularity: 'P1Y', timeBound: 'No Filter' },
   1: { granularity: 'P1M', timeBound: 'year' },
-  2: { granularity: 'P1W', timeBound: 'month' },
+  2: { granularity: 'P1D', timeBound: 'month' },
   3: { granularity: 'P1D', timeBound: 'week' },
   4: { granularity: 'PT1H', timeBound: 'day' },
 });
