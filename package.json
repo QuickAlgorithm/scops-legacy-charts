@@ -1,6 +1,6 @@
 {
   "name": "@quickalgorithm/scops-legacy-charts",
-  "version": "0.10.42",
+  "version": "0.10.43",
   "description": "Scops Legacy Chart - NVD3",
   "sideEffects": [
     "*.css"
@@ -16,12 +16,12 @@
     "superset"
   ],
   "scripts": {
-    "build": "yarn babel && yarn build:assets",
+    "build": "yarn clean && yarn babel && yarn build:assets",
     "babel": "yarn babel:cjs && yarn babel:esm",
-    "babel:cjs": "nimbus babel --clean",
-    "babel:esm": "nimbus babel --clean --esm",
+    "babel:cjs": "nimbus babel",
+    "babel:esm": "nimbus babel",
     "build:assets": "node ./scripts/buildAssets.js",
-    "clean": "rm -rf ./packages/**/{lib,esm}",
+    "clean": "rm -rf ./lib && rm -rf ./esm",
     "type": "nimbus typescript --build"
   },
   "author": "Superset",
