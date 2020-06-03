@@ -309,9 +309,10 @@ function nvd3Vis(element, props) {
       .format('YYYY-MM-DDTHH:mm:ss');
     const timeRange = `${startRange} : ${endRange}`;
 
+    onAddFilter('__time_grain', stepConfig.granularity, false, false);
+    onAddFilter('__time_range', timeRange, false, true);
+    console.log('chack')
     window.__scopsChartStepHystory.push({ timeRange, granularity: stepConfig.granularity });
-    onAddFilter('__time_range', timeRange, false, false);
-    onAddFilter('__time_grain', stepConfig.granularity, false, true);
   };
 
   const drawGraph = function drawGraph() {
