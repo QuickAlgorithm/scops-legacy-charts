@@ -311,7 +311,6 @@ function nvd3Vis(element, props) {
 
     onAddFilter('__time_grain', stepConfig.granularity, false, false);
     onAddFilter('__time_range', timeRange, false, true);
-    console.log('chack')
     window.__scopsChartStepHystory.push({ timeRange, granularity: stepConfig.granularity });
   };
 
