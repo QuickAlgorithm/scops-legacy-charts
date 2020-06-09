@@ -218,21 +218,21 @@ const getLabelFromTimeBound = (timeBound, date) => {
       label = date.clone().format('YYYY')
       break;
     case 'month':
-      label = date.clone().format('MM')
+      label = date.clone().format('MMM YYYY')
       break;
     case 'week':
       const startOfWeek = date
       .clone()
       .startOf('week')
-      .format('DD');
+      .format('Do MMM');
       const endOfWeek = date
       .clone()
       .endOf('week')
-      .format('DD MMM YYYY');
+      .format('Do MMM YYYY');
       label = `${startOfWeek} - ${endOfWeek}`
       break;
     case 'day':
-      label = date.clone().format('DD')
+      label = date.clone().format('Do MMM')
       break;
     default:
       label = ''
