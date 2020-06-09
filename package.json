@@ -22,7 +22,8 @@
     "babel:esm": "nimbus babel",
     "build:assets": "node ./scripts/buildAssets.js",
     "clean": "rm -rf ./lib && rm -rf ./esm",
-    "type": "nimbus typescript --build"
+    "type": "nimbus typescript --build",
+    "release": "yarn build && git push origin master && npm publish"
   },
   "author": "Superset",
   "license": "Apache-2.0",
