@@ -1,6 +1,6 @@
 {
   "name": "@quickalgorithm/scops-legacy-charts",
-  "version": "0.10.44",
+  "version": "0.10.45",
   "description": "Scops Legacy Chart - NVD3",
   "sideEffects": [
     "*.css"
