@@ -211,9 +211,40 @@ const chartSteps = Object.freeze({
   4: { granularity: 'PT1H', timeBound: 'day' },
 });
 
+const getLabelFromTimeBound = (timeBound, date) => {
+  const label = ''
+  switch(timeBound) {
+    case 'year':
+      label = date.clone().format('YYYY')
+      break;
+    case 'month':
+      label = date.clone().format('MM')
+      break;
+    case 'week':
+      const startOfWeek = date
+      .clone()
+      .startOf('week')
+      .format('DD');
+      const endOfWeek = date
+      .clone()
+      .endOf('week')
+      .format('DD MMM YYYY');
+      label = `${startOfWeek} - ${endOfWeek}`
+      break;
+    case 'day':
+      label = date.clone().format('DD')
+      break;
+    default:
+      label = ''
+  }
+  return label
+}
+
 // assining global variable to let the back button on scops read the values
 window.__scopsActualChartStep = 0;
 window.__scopsChartStepHystory = [];
+// this will be used to show a label when the user filters with the drilldown
+window.__scopsDrillDownLabel = ''
 
 const NOOP = () => {};
 const formatter = getNumberFormatter();
@@ -308,6 +339,9 @@ function nvd3Vis(element, props) {
       .endOf(stepConfig.timeBound)
       .format('YYYY-MM-DDTHH:mm:ss');
     const timeRange = `${startRange} : ${endRange}`;
+
+    const label = getLabelFromTimeBound(stepConfig.timeBound, date)
+    window.__scopsDrillDownLabel = label
 
     onAddFilter('__time_grain', stepConfig.granularity, false, false);
     onAddFilter('__time_range', timeRange, false, true);
