@@ -212,7 +212,7 @@ const chartSteps = Object.freeze({
 });
 
 const getLabelFromTimeBound = (timeBound, date) => {
-  const label = ''
+  let label = ''
   switch(timeBound) {
     case 'year':
       label = date.clone().format('YYYY')
