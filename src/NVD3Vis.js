@@ -232,7 +232,7 @@ const getLabelFromTimeBound = (timeBound, date) => {
       label = `${startOfWeek} - ${endOfWeek}`
       break;
     case 'day':
-      label = date.clone().format('Do MMM')
+      label = date.clone().format('Do MMM YYYY')
       break;
     default:
       label = ''
